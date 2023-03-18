@@ -1,0 +1,11 @@
+{
+  "name": "gameconsign-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dimas Bayu Suseno",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.21"
+  }
+}

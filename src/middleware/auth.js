@@ -1,4 +1,9 @@
+require('dotenv').config();
+
 const response = require("../const/const")
+
+const ENV_USERNAME = process.env.USERNAME;
+const ENV_PASSWORD = process.env.PASSWORD;
 
 const authRequest = (req, res, next) => {
     console.log("auth validation")
@@ -17,7 +22,7 @@ const authRequest = (req, res, next) => {
 
     }
 
-    if (username !== response.authorizedUsers.username || password !== response.authorizedUsers.password) {
+    if (username !== ENV_USERNAME || password !== ENV_PASSWORD) {
         return res.status(response.unauthorized).send(response.invalidAuth);
     }
 
